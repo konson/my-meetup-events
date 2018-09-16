@@ -9,7 +9,7 @@
 import Foundation
 
 enum EndPoint: String {
-    case findUpcomingEvents = "find/upcoming_events/"
+    case findUpcomingEvents = "/find/upcoming_events"
 }
 
 enum MeetUpError: Error {
@@ -18,8 +18,8 @@ enum MeetUpError: Error {
 
 struct MeetUpAPI {
     
-    private static let baseURLString = "https://api.meetup.com/"
-    private static let apiKey = ""
+    private static let baseURLString = "https://api.meetup.com/find/upcoming_events"
+    private static let apiKey = "3473383766a63725c295d56c356174"
     
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -47,16 +47,27 @@ struct MeetUpAPI {
         
         var queryItems = [URLQueryItem]()
         
-        let baseParams = [
-            "method": endPoint.rawValue,
-            "format": "json",
-            "nojsoncallback": "1",
-            "api_key": apiKey]
+//        let baseParams = [
+//            "method": endPoint.rawValue,
+//            "format": "json",
+//            "nojsoncallback": "1",
+//            "api_key": apiKey
+//        ]
         
-        for (key, value) in baseParams {
-            let item = URLQueryItem(name: key, value: value)
-            queryItems.append(item)
-        }
+//        let baseParams = [
+////            "method": endPoint.rawValue,
+//////            "format": "json",
+//////            "nojsoncallback": "1",
+////            "api_key": apiKey
+//        ]
+        
+        // end_date_range = "2020-01-01T00:00:00"
+        // text = "Northwest OTP Study Group"
+        
+//        for (key, value) in baseParams {
+//            let item = URLQueryItem(name: key, value: value)
+//            queryItems.append(item)
+//        }
         
         if let additionalParams = parameters {
             for (key, value) in additionalParams {
@@ -67,15 +78,13 @@ struct MeetUpAPI {
         
         components.queryItems = queryItems
         
-        //return components.url!
-        
-        //MARK: TODO
-        // generate a proper URL
-        return URL(string: "https://api.meetup.com/find/upcoming_events?photo-host=public&end_date_range=2020-01-01T00%3A00%3A00&text=Northwest+OTP+Study+Group&sig_id=80204312&sig=18c0479d9b5e532d503ae8f82922ac56d0e572d0")!
+        return components.url!
     }
     
     static var upcomingEventsURL: URL {
-        return meetUpURL(endPoint: .findUpcomingEvents, parameters: ["end_time_range": "2020-01-01T00:00:00",
+        return meetUpURL(endPoint: .findUpcomingEvents, parameters: ["sign": "true",
+                                                                     "key": "3473383766a63725c295d56c356174",
+                                                                     "end_date_range": "2020-01-01T00:00:00",
                                                                      "text": "Northwest OTP Study Group"])
     }
     
