@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		511CD21C214DD81F00846F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511CD21B214DD81F00846F76 /* AppDelegate.swift */; };
-		511CD21E214DD81F00846F76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511CD21D214DD81F00846F76 /* ViewController.swift */; };
 		511CD221214DD81F00846F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511CD21F214DD81F00846F76 /* Main.storyboard */; };
 		511CD223214DD81F00846F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511CD222214DD81F00846F76 /* Assets.xcassets */; };
 		511CD226214DD81F00846F76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511CD224214DD81F00846F76 /* LaunchScreen.storyboard */; };
@@ -43,7 +42,6 @@
 /* Begin PBXFileReference section */
 		511CD218214DD81F00846F76 /* MeetUpEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetUpEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511CD21B214DD81F00846F76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		511CD21D214DD81F00846F76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		511CD220214DD81F00846F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		511CD222214DD81F00846F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		511CD225214DD81F00846F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				511CD249214DD87800846F76 /* MeetUpViewController.swift */,
 				511CD251214DE21900846F76 /* MeetUpCell.swift */,
 				511CD24F214DDC1200846F76 /* MeeUpAPI.swift */,
-				511CD21D214DD81F00846F76 /* ViewController.swift */,
 				511CD222214DD81F00846F76 /* Assets.xcassets */,
 				514742B9214E8298004A06C1 /* Resources */,
 				511CD224214DD81F00846F76 /* LaunchScreen.storyboard */,
@@ -295,7 +292,6 @@
 				511CD252214DE21900846F76 /* MeetUpCell.swift in Sources */,
 				511CD24E214DDA5700846F76 /* MeetUpStore.swift in Sources */,
 				51A35195214EA4AF00483774 /* UIColorExtension+MeetUpEvents.swift in Sources */,
-				511CD21E214DD81F00846F76 /* ViewController.swift in Sources */,
 				511CD21C214DD81F00846F76 /* AppDelegate.swift in Sources */,
 				511CD24C214DD97500846F76 /* MeetUp.swift in Sources */,
 			);

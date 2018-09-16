@@ -9,7 +9,7 @@
 import Foundation
 
 enum EndPoint: String {
-    case findUpcomingEvents = "/find/upcoming_events"
+    case findUpcomingEvents = "https://api.meetup.com/find/upcoming_events"
 }
 
 enum MeetUpError: Error {
@@ -18,7 +18,7 @@ enum MeetUpError: Error {
 
 struct MeetUpAPI {
     
-    private static let baseURLString = "https://api.meetup.com/find/upcoming_events"
+    private static let baseURLString = "https://api.meetup.com/"
     private static let apiKey = "3473383766a63725c295d56c356174"
     
     private static let dateFormatter: DateFormatter = {
@@ -36,38 +36,15 @@ struct MeetUpAPI {
                 print("Error: not enough data to construct a MeetUP")
                 return nil
         }
-
         
         return MeetUp(name: name, dateTime: dateTimeMilliseconds, link: link, rsvp: rsvp)
     }
     
     private static func meetUpURL(endPoint: EndPoint,
                                   parameters: [String: String]?) -> URL {
-        var components = URLComponents(string: baseURLString)!
+        var components = URLComponents(string: EndPoint.findUpcomingEvents.rawValue)!
         
         var queryItems = [URLQueryItem]()
-        
-//        let baseParams = [
-//            "method": endPoint.rawValue,
-//            "format": "json",
-//            "nojsoncallback": "1",
-//            "api_key": apiKey
-//        ]
-        
-//        let baseParams = [
-////            "method": endPoint.rawValue,
-//////            "format": "json",
-//////            "nojsoncallback": "1",
-////            "api_key": apiKey
-//        ]
-        
-        // end_date_range = "2020-01-01T00:00:00"
-        // text = "Northwest OTP Study Group"
-        
-//        for (key, value) in baseParams {
-//            let item = URLQueryItem(name: key, value: value)
-//            queryItems.append(item)
-//        }
         
         if let additionalParams = parameters {
             for (key, value) in additionalParams {
