@@ -82,7 +82,6 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.63610901310000001" green="0.78039215689999997" blue="0.7525149994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="gxP-kq-ulM" secondAttribute="trailing" constant="10" id="EDv-qt-Qri"/>
                                                 <constraint firstItem="gxP-kq-ulM" firstAttribute="top" secondItem="PhF-Nb-AXr" secondAttribute="top" constant="10" id="J98-dQ-SJt"/>
@@ -91,7 +90,6 @@
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="PhF-Nb-AXr" secondAttribute="bottom" constant="5" id="7Hb-Dh-GbE"/>
                                         <constraint firstAttribute="trailing" secondItem="PhF-Nb-AXr" secondAttribute="trailing" constant="10" id="PRq-x7-dQa"/>
@@ -102,6 +100,7 @@
                                 <connections>
                                     <outlet property="dateLabel" destination="KTW-6L-JZD" id="1BV-go-7Cl"/>
                                     <outlet property="groupLabel" destination="rrZ-iL-cG5" id="qOA-9z-0vR"/>
+                                    <outlet property="meetUPView" destination="PhF-Nb-AXr" id="pcD-cx-fZY"/>
                                     <outlet property="meetUpLabel" destination="nDF-hE-iyh" id="oPr-gl-hXm"/>
                                     <outlet property="rsvpLabel" destination="bVO-8D-NIo" id="NEf-Ee-lTV"/>
                                 </connections>

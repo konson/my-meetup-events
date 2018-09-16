@@ -12,16 +12,16 @@ class MeetUp: Equatable {
     let group: String = "Women Who Code Atlanta"
     //let remoteURL: URL
     let name: String
-    let date: Int
+    let dateTimeMilliseconds: Int
     let rsvp: Int
     let link: String
     
     init(name: String,
-         date: Int,
+         dateTime: Int,
          link: String,
          rsvp: Int) {
         self.name = name
-        self.date = date
+        self.dateTimeMilliseconds = dateTime
         self.rsvp = rsvp
         self.link = link
     }

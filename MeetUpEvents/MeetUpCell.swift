@@ -16,25 +16,36 @@
 
 import UIKit
 
+enum LocationName: String {
+    case Woodstock = "Woodstock"
+    case Kennesaw = "Kennesaw"
+}
+
 class MeetUpCell: UITableViewCell {
     
     @IBOutlet var groupLabel: UILabel!
     @IBOutlet var meetUpLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var rsvpLabel: UILabel!
-    
+    @IBOutlet var meetUPView: UIView!
     override func prepareForReuse() {
         super.prepareForReuse()
-        update(with: nil)
+        configure(with: nil)
     }
     
-    func update(with meetUp: MeetUp?) {
+    func configure(with meetUp: MeetUp?) {
         if let meetUp = meetUp {
-            let dateString = dateFormatter(dateInMilliseconds: meetUp.date)
+            let dateString = dateFormatter(dateInMilliseconds: meetUp.dateTimeMilliseconds)
             groupLabel.text = meetUp.group
             meetUpLabel.text = meetUp.name
             dateLabel.text = dateString
             rsvpLabel.text = String(meetUp.rsvp)
+            
+            meetUPView.layer.cornerRadius = 8
+            meetUPView.layer.masksToBounds = true
+            
+            let containsWoodstock = meetUpLabel.text?.range(of: LocationName.Woodstock.rawValue)
+            meetUPView.backgroundColor =  containsWoodstock != nil ? UIColor.woodstock : UIColor.kennesaw
         } else {
             groupLabel.text = nil
             meetUpLabel.text = nil

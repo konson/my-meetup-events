@@ -30,7 +30,7 @@ struct MeetUpAPI {
     private static func meetUp(fromJSON json: [String:Any]) -> MeetUp? {
         guard
             let name = json["name"] as? String,
-            let date = json["time"] as? Int,
+            let dateTimeMilliseconds = json["time"] as? Int,
             let link = json["link"] as? String,
             let rsvp = json["yes_rsvp_count"] as? Int else {
                 print("Error: not enough data to construct a MeetUP")
@@ -38,7 +38,7 @@ struct MeetUpAPI {
         }
 
         
-        return MeetUp(name: name, date: date, link: link, rsvp: rsvp)
+        return MeetUp(name: name, dateTime: dateTimeMilliseconds, link: link, rsvp: rsvp)
     }
     
     private static func meetUpURL(endPoint: EndPoint,

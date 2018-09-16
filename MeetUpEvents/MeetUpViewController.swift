@@ -11,11 +11,13 @@ import UIKit
 class MeetUpViewController: UITableViewController {
     
     var meetUpStore: MeetUpStore!
-
+    @IBOutlet var meetUpCellView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 130
+        tableView.separatorStyle = .none
         
         meetUpStore.fetchUpcomingEvents {
             
@@ -23,7 +25,7 @@ class MeetUpViewController: UITableViewController {
             
             switch meetUpResult {
             case let .success(events):
-                let sortedEvents = events.sorted() { $0.date < $1.date }
+                let sortedEvents = events.sorted() { $0.dateTimeMilliseconds < $1.dateTimeMilliseconds }
                 self.meetUpStore.allMeetUps = sortedEvents
             case let .failure(error):
                 print("Error fetching meetup events: \(error)")
@@ -51,13 +53,7 @@ extension MeetUpViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MeetUpCell", for: indexPath) as! MeetUpCell
         let meetUp = meetUpStore.allMeetUps[indexPath.row]
         
-        cell.update(with: meetUp)
-        
-//        cell.dateLabel.text = meetUp.date
-//        cell.groupLabel.text = meetUp.group
-//        cell.meetUpLabel.text = meetUp.name
-//        cell.rsvpLabel.text = String(meetUp.rsvp)
-//        cell.timeLabel.text = meetUp.time
+        cell.configure(with: meetUp)
         
         return cell
     }

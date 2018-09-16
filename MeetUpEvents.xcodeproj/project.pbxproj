@@ -20,6 +20,7 @@
 		511CD250214DDC1200846F76 /* MeeUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511CD24F214DDC1200846F76 /* MeeUpAPI.swift */; };
 		511CD252214DE21900846F76 /* MeetUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511CD251214DE21900846F76 /* MeetUpCell.swift */; };
 		514742BB214E82FA004A06C1 /* Date+MeetUpEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514742BA214E82FA004A06C1 /* Date+MeetUpEvents.swift */; };
+		51A35195214EA4AF00483774 /* UIColorExtension+MeetUpEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A35194214EA4AF00483774 /* UIColorExtension+MeetUpEvents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		511CD24F214DDC1200846F76 /* MeeUpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeUpAPI.swift; sourceTree = "<group>"; };
 		511CD251214DE21900846F76 /* MeetUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetUpCell.swift; sourceTree = "<group>"; };
 		514742BA214E82FA004A06C1 /* Date+MeetUpEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+MeetUpEvents.swift"; sourceTree = "<group>"; };
+		51A35194214EA4AF00483774 /* UIColorExtension+MeetUpEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColorExtension+MeetUpEvents.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				514742BA214E82FA004A06C1 /* Date+MeetUpEvents.swift */,
+				51A35194214EA4AF00483774 /* UIColorExtension+MeetUpEvents.swift */,
 			);
 			name = Resources;
 			path = ..;
@@ -291,6 +294,7 @@
 				511CD250214DDC1200846F76 /* MeeUpAPI.swift in Sources */,
 				511CD252214DE21900846F76 /* MeetUpCell.swift in Sources */,
 				511CD24E214DDA5700846F76 /* MeetUpStore.swift in Sources */,
+				51A35195214EA4AF00483774 /* UIColorExtension+MeetUpEvents.swift in Sources */,
 				511CD21E214DD81F00846F76 /* ViewController.swift in Sources */,
 				511CD21C214DD81F00846F76 /* AppDelegate.swift in Sources */,
 				511CD24C214DD97500846F76 /* MeetUp.swift in Sources */,
