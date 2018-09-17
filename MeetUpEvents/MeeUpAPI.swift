@@ -21,12 +21,6 @@ struct MeetUpAPI {
     private static let baseURLString = "https://api.meetup.com/"
     private static let apiKey = "3473383766a63725c295d56c356174"
     
-    private static let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter
-    }()
-    
     private static func meetUp(fromJSON json: [String:Any]) -> MeetUp? {
         guard
             let name = json["name"] as? String,
