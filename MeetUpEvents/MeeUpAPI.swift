@@ -53,10 +53,11 @@ struct MeetUpAPI {
     }
     
     static var upcomingEventsURL: URL {
-        return meetUpURL(endPoint: .findUpcomingEvents, parameters: ["sign": "true",
-                                                                     "key": "3473383766a63725c295d56c356174",
-                                                                     "end_date_range": "2020-01-01T00:00:00",
-                                                                     "text": "Northwest OTP Study Group"])
+        return meetUpURL(endPoint: .findUpcomingEvents,
+                         parameters: ["sign": "true",
+                                      "key": "3473383766a63725c295d56c356174",
+                                      "end_date_range": "2020-01-01T00:00:00",
+                                      "text": "Northwest OTP Study Group"])
     }
     
     static func meetUps(fromJSON data: Data) -> MeetUpResults {
@@ -64,8 +65,8 @@ struct MeetUpAPI {
             let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
             
             guard
-            let jsonDictionary = jsonObject as? [AnyHashable:Any],  // 2 key/value pairs (city and events)
-            let meetUpsArray = jsonDictionary["events"] as? [Any]
+            let jsonArray = jsonObject as? [AnyHashable:Any],  // 2 key/value pairs (city and events)
+            let meetUpsArray = jsonArray["events"] as? [Any]
                 else {
                 return .failure(MeetUpError.invalidJSONData)
             }
