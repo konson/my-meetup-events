@@ -110,11 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				511CD21F214DD81F00846F76 /* Main.storyboard */,
-				511CD24B214DD97500846F76 /* MeetUp.swift */,
-				511CD24D214DDA5700846F76 /* MeetUpStore.swift */,
 				511CD21B214DD81F00846F76 /* AppDelegate.swift */,
 				511CD249214DD87800846F76 /* MeetUpViewController.swift */,
 				511CD251214DE21900846F76 /* MeetUpCell.swift */,
+				511CD24B214DD97500846F76 /* MeetUp.swift */,
+				511CD24D214DDA5700846F76 /* MeetUpStore.swift */,
 				511CD24F214DDC1200846F76 /* MeeUpAPI.swift */,
 				511CD222214DD81F00846F76 /* Assets.xcassets */,
 				514742B9214E8298004A06C1 /* Resources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeetUp: Equatable {
+class MeetUp {
     let group: String = "Women Who Code Atlanta"
     //let remoteURL: URL
     let name: String
@@ -24,9 +24,5 @@ class MeetUp: Equatable {
         self.dateTimeMilliseconds = dateTime
         self.rsvp = rsvp
         self.link = link
-    }
-    
-    static func == (lhs: MeetUp, rhs: MeetUp) -> Bool {
-        return lhs.name == rhs.name
     }
 }
